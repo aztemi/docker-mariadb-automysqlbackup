@@ -22,6 +22,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Docker metadata
+        id: meta
         uses: docker/metadata-action@v6
         with:
           images: aztemi/mariadb-automysqlbackup
